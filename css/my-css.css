@@ -1,0 +1,268 @@
+/* global */
+/* universal box sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* set body font type */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* text position is center and set space after */
+h1 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* other heading have space after */
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 1.5rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* set max size and padding around the box*/
+.container {
+  max-width: 1200px;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+/* style the top navigation bar */
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* style the logo on the navigation bar */
+.logo {
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+}
+
+/* style the navigation menu items */
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  color: rgb(78, 78, 78);
+}
+.nav-menu a:hover,
+a.active {
+  background-color: #001ea5;
+  color: white;
+}
+
+/* buttons */
+.button {
+  display: inline-block;
+  padding: 1rem 5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border-color: #001ea5;
+  text-decoration: none;
+}
+.btn-cta {
+  background-color: #140664;
+  color: rgb(0, 0, 0);
+}
+
+/* style the call-to-action button. background is blue so font colour set to white */
+.btn-booknow {
+  background-color: #ffffff;
+  color: #001ea5;
+  border: 2px solid white;
+}
+.btn-booknow:hover {
+  background-color: #001ea5;
+  color: white;
+  border-color: white;
+}
+
+/* stayling page description on each page except the main home page */
+.section-description {
+  font-size: 1.3rem;
+  color: #555;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* intro section on home page */
+.intro {
+  background-color: rgb(229, 237, 253);
+  padding: 2rem 0;
+}
+
+.intro .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.right-col-photo img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* why choose us section on home page*/
+.why-us {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+/* call to action section on home page */
+.call-to-action {
+  background-color: #001ea5;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+/* the main top section on pages other than the home page*/
+.top-section {
+  padding: 3rem 0;
+  background-color: rgb(236, 251, 255);
+}
+
+/* service table */
+.service-table {
+  margin-top: 4rem;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-table th {
+  background-color: #273366;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+.service-table td {
+  padding: 1rem 3rem;
+  border-bottom: 1px solid #bdbdbd;
+  vertical-align: top;
+}
+
+/* show gallery images in grid 4x4 */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* center the google form on book page*/
+.booking-form {
+  display: flex;
+  justify-content: center;
+}
+/* footer */
+footer {
+  padding: 2rem 0;
+  background-color: rgb(57, 57, 57);
+  color: white;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+/* responsive tablet size */
+@media (max-width: 768px) {
+  /* re-arrange navigation items to vertical column */
+  .nav .container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  /* button width filled across the page */
+  .button {
+    width: 100%;
+  }
+
+  /* reduce the space between the table and heading  */
+  .service-table {
+    margin-top: 1rem;
+  }
+
+  /* reduce the space inside each cell */
+  .service-table td,
+  .service-table t {
+    padding: 0.5rem;
+  }
+
+  /* change the footer items to vetical column */
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .right-col-photo {
+    justify-content: center;
+  }
+}
+
+/* responsive mobile size */
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
