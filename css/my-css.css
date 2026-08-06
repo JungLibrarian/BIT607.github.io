@@ -6,18 +6,18 @@
   box-sizing: border-box;
 }
 
-/* set body font type */
+/* set body default font for the entire website */
 body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* text position is center and set space after */
+/* center page headings and add space */
 h1 {
   text-align: center;
   margin-bottom: 1.5rem;
 }
 
-/* other heading have space after */
+/* add spacing below secondary headings */
 h2,
 h3,
 h4,
@@ -30,21 +30,21 @@ p {
   margin-bottom: 1rem;
 }
 
-/* set max size and padding around the box*/
+/* set max size for containers and add spacing below */
 .container {
   max-width: 1200px;
   padding: 2rem;
   margin: 0 auto;
 }
 
-/* style the top navigation bar */
+/* arrange the logo and navigation menu in a horizontal row */
 .nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-/* style the logo on the navigation bar */
+/* style the business logo link */
 .logo {
   text-decoration: none;
   font-size: 1.5rem;
@@ -52,7 +52,7 @@ p {
   color: black;
 }
 
-/* style the navigation menu items */
+/* display navigation links in a horizontal row */
 .nav-menu {
   display: flex;
   gap: 1rem;
@@ -62,8 +62,8 @@ p {
 .nav-menu a {
   text-decoration: none;
   padding: 0.75rem 1rem;
-  border-radius: 0.5rem;
-  color: rgb(78, 78, 78);
+  border-radius: 6px;
+  color: #2a2a2a;
 }
 .nav-menu a:hover,
 a.active {
@@ -71,42 +71,7 @@ a.active {
   color: white;
 }
 
-/* buttons */
-.button {
-  display: inline-block;
-  padding: 1rem 5rem;
-  font-size: 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  border-color: #001ea5;
-  text-decoration: none;
-}
-.btn-cta {
-  background-color: #140664;
-  color: rgb(0, 0, 0);
-}
-
-/* style the call-to-action button. background is blue so font colour set to white */
-.btn-booknow {
-  background-color: #ffffff;
-  color: #001ea5;
-  border: 2px solid white;
-}
-.btn-booknow:hover {
-  background-color: #001ea5;
-  color: white;
-  border-color: white;
-}
-
-/* stayling page description on each page except the main home page */
-.section-description {
-  font-size: 1.3rem;
-  color: #555;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* intro section on home page */
+/* intro section on the home page */
 .intro {
   background-color: rgb(229, 237, 253);
   padding: 2rem 0;
@@ -116,16 +81,15 @@ a.active {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 2rem;
 }
 
 .right-col-photo img {
   max-width: 100%;
   height: auto;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
-/* why choose us section on home page*/
+/* why-choose-us section on the home page*/
 .why-us {
   padding: 2rem 0;
   text-align: center;
@@ -138,7 +102,7 @@ a.active {
   margin-top: 2rem;
 }
 
-/* call to action section on home page */
+/* call to action section on the home page */
 .call-to-action {
   background-color: #001ea5;
   color: #ffffff;
@@ -146,13 +110,40 @@ a.active {
   padding: 2rem 0;
 }
 
-/* the main top section on pages other than the home page*/
+/* style the call-to-action button */
+.btn-booknow {
+  display: inline-block;
+  padding: 1rem 5rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #001ea5;
+  border: 2px solid white;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn-booknow:hover {
+  background-color: #001ea5;
+  color: white;
+  border-color: white;
+}
+
+/* page header section on pages */
 .top-section {
   padding: 3rem 0;
   background-color: rgb(236, 251, 255);
 }
 
-/* service table */
+/* style page descriptions below the page headings */
+.section-description {
+  font-size: 1.3rem;
+  color: #2a2a2a;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* styling service and pricing table on the service page */
 .service-table {
   margin-top: 4rem;
   width: 100%;
@@ -173,10 +164,10 @@ a.active {
   vertical-align: top;
 }
 
-/* show gallery images in grid 4x4 */
+/* show gallery images in a 4 column grid on the gallery page */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: auto auto auto auto;
   gap: 10px;
 }
 
@@ -187,82 +178,187 @@ a.active {
   border-radius: 6px;
 }
 
-/* center the google form on book page*/
-.booking-form {
-  display: flex;
-  justify-content: center;
+/* layout used for the contact form and google map on the contact page */
+.column {
+  width: 100%;
 }
-/* footer */
+
+/* booking form on the booking page */
+.booking-form {
+  padding: 2rem;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+}
+
+.booking-form legend {
+  margin-bottom: 1rem;
+  font-size: 1.3rem;
+}
+
+.booking-form fieldset {
+  border: 1px solid;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.booking-form label {
+  display: block;
+}
+
+/* style text inputs and form controls */
+.booking-form input {
+  width: 100%;
+  height: 40px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 8px;
+  border: 1px solid #bdbdbd;
+  padding: 0 1rem;
+}
+
+/* display service items in a two column grid in the booking form */
+.service-items {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+/* booking form - individual service card */
+.service-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem;
+}
+
+/* booking form checkbox - prevent from stretching to full width*/
+.service-item input {
+  width: auto;
+}
+
+/* contact form - comment box styling */
+textarea {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  border-color: #bdbdbd;
+}
+
+/* add spacing above the submit button */
+.submit {
+  margin-top: 2rem;
+}
+
+/* override default input styling for the submit button */
+.booking-form .submit-button {
+  height: 60px;
+  border-radius: 8px;
+  border: solid 1px #363636;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.submit-button:hover {
+  background-color: #140664;
+  color: #ffffff;
+}
+
+/* footer across all pages */
 footer {
   padding: 2rem 0;
-  background-color: rgb(57, 57, 57);
+  background-color: #363636;
   color: white;
 }
 
 footer .container {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
 }
 
-/* responsive tablet size */
+/* tablet size layout */
 @media (max-width: 768px) {
-  /* re-arrange navigation items to vertical column */
+  /* re-arrange logo and navigation vertically */
   .nav .container {
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
-  }
-  .nav-menu {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
+    gap: 3rem;
   }
 
-  /* button width filled across the page */
-  .button {
+  /* reduce spacing between navigation items */
+  .nav-menu {
+    gap: 0.5rem;
+  }
+
+  /* make booknow button span across the screen */
+  .btn-booknow {
     width: 100%;
   }
 
-  /* reduce the space between the table and heading  */
+  /* reduce the space above the services table  */
   .service-table {
     margin-top: 1rem;
   }
 
-  /* reduce the space inside each cell */
+  /* reduce table cell padding on smaller screens */
   .service-table td,
-  .service-table t {
+  .service-table th {
     padding: 0.5rem;
   }
 
-  /* change the footer items to vetical column */
-  footer .container {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-
+  /* stack row content vertically */
   .row {
     flex-direction: column;
     gap: 2rem;
   }
 
+  /* display gallery images in two columns */
   .gallery {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: auto auto;
   }
 
+  /* stack intro content vertically */
   .intro .container {
     flex-direction: column;
     text-align: center;
   }
-  .right-col-photo {
-    justify-content: center;
+
+  /* reduce form padding */
+  .booking-form {
+    padding: 1rem;
+  }
+  /* stack footer content vertically */
+  footer .container {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
   }
 }
 
-/* responsive mobile size */
+/* movile layout */
 @media (max-width: 600px) {
+  /* diplay navigation links as a vertical menu */
+  .nav-menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  /* reduce container padding to maximise screen space */
+  .top-section .container {
+    padding: 0.5rem;
+  }
+
+  /* display gallery images in a single column */
   .gallery {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+  }
+
+  /* booking form - display service cards in a single column */
+  .service-items {
+    grid-template-columns: auto;
   }
 }
