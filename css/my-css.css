@@ -267,6 +267,10 @@ textarea {
   color: #ffffff;
 }
 
+iframe {
+  width: 100%;
+}
+
 /* footer across all pages */
 footer {
   padding: 2rem 0;
